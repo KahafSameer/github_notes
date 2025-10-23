@@ -185,6 +185,52 @@
                 <p>Use secrets in CI/CD workflows.</p>
             </div>
         </section>
+        <section id="interview">
+            <h2>Interview</h2>
+            <button id="toggle-interview">Show Interview Questions</button>
+            <div id="interview-content" style="display:none;">
+                <div class="command">
+                    <pre><code>What is Git and why is it important for DevOps?</code></pre>
+                    <p>Git is a distributed version control system that tracks changes in source code. It's crucial for DevOps as it enables collaboration, version tracking, and integration with CI/CD pipelines for automated deployments.</p>
+                </div>
+                <div class="command">
+                    <pre><code>How do you create and switch to a new branch in Git?</code></pre>
+                    <p>Use 'git checkout -b new-branch' to create and switch to a new branch, or 'git branch new-branch' followed by 'git checkout new-branch'.</p>
+                </div>
+                <div class="command">
+                    <pre><code>Explain the difference between git merge and git rebase.</code></pre>
+                    <p>Git merge combines branches by creating a merge commit, preserving history. Git rebase rewrites history by applying commits on top of another branch, resulting in a linear history.</p>
+                </div>
+                <div class="command">
+                    <pre><code>What are GitHub Pull Requests and how do they facilitate collaboration?</code></pre>
+                    <p>Pull Requests (PRs) allow developers to propose changes, review code, and discuss modifications before merging. They enable code reviews, automated testing, and collaboration in teams.</p>
+                </div>
+                <div class="command">
+                    <pre><code>How do you handle merge conflicts in Git?</code></pre>
+                    <p>Resolve conflicts by editing the conflicted files, marking resolved sections with '<<<<<<<', '=======', and '>>>>>>>' markers, then staging and committing the changes.</p>
+                </div>
+                <div class="command">
+                    <pre><code>What is GitLab CI/CD and how does it differ from GitHub Actions?</code></pre>
+                    <p>GitLab CI/CD is an integrated tool for continuous integration and deployment within GitLab. It differs from GitHub Actions by being more tightly integrated with GitLab's ecosystem, offering built-in runners and a unified UI.</p>
+                </div>
+                <div class="command">
+                    <pre><code>How do you revert a commit in Git?</code></pre>
+                    <p>Use 'git revert commit-hash' to create a new commit that undoes the changes of the specified commit, preserving history. For a hard reset, use 'git reset --hard commit-hash' (destructive).</p>
+                </div>
+                <div class="command">
+                    <pre><code>What are Git hooks and how are they used in DevOps?</code></pre>
+                    <p>Git hooks are scripts that run at certain points in the Git workflow (e.g., pre-commit, post-merge). In DevOps, they're used for code quality checks, linting, and triggering CI/CD pipelines.</p>
+                </div>
+                <div class="command">
+                    <pre><code>How do you set up a remote repository in Git?</code></pre>
+                    <p>Use 'git remote add origin https://github.com/user/repo.git' to add a remote, then 'git push -u origin main' to push and set upstream.</p>
+                </div>
+                <div class="command">
+                    <pre><code>Explain the concept of Git stashing and when to use it.</code></pre>
+                    <p>Git stash temporarily saves uncommitted changes. Use it when you need to switch branches or pull changes without committing incomplete work, then apply with 'git stash pop'.</p>
+                </div>
+            </div>
+        </section>
     </main>
     <script src="script.js"></script>
 </body>

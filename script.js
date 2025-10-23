@@ -15,4 +15,18 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+
+    // Toggle interview questions
+    const toggleButton = document.getElementById('toggle-interview');
+    const interviewContent = document.getElementById('interview-content');
+
+    toggleButton.addEventListener('click', function() {
+        if (interviewContent.style.display === 'none') {
+            interviewContent.style.display = 'block';
+            toggleButton.textContent = 'Hide Interview Questions';
+        } else {
+            interviewContent.style.display = 'none';
+            toggleButton.textContent = 'Show Interview Questions';
+        }
+    });
 });
