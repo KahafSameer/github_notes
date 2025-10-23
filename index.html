@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git & GitHub Commands Reference</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Git & GitHub Commands Reference</h1>
+        <input type="text" id="search" placeholder="Search commands..." aria-label="Search commands">
+    </header>
+    <main>
+        <section id="basics">
+            <h2>Basics</h2>
+            <div class="command">
+                <pre><code>git init</code></pre>
+                <p>Initialize a new Git repository in the current directory.</p>
+            </div>
+            <div class="command">
+                <pre><code>git add .</code></pre>
+                <p>Stage all changes in the working directory for the next commit.</p>
+            </div>
+            <div class="command">
+                <pre><code>git commit -m "message"</code></pre>
+                <p>Commit staged changes with a descriptive message.</p>
+            </div>
+            <div class="command">
+                <pre><code>git status</code></pre>
+                <p>Show the status of changes as untracked, modified, or staged.</p>
+            </div>
+            <div class="command">
+                <pre><code>git log</code></pre>
+                <p>Display the commit history of the repository.</p>
+            </div>
+            <div class="command">
+                <pre><code>git diff</code></pre>
+                <p>Show differences between working directory and staged changes.</p>
+            </div>
+        </section>
+        <section id="branching">
+            <h2>Branching</h2>
+            <div class="command">
+                <pre><code>git branch</code></pre>
+                <p>List all branches in the repository.</p>
+            </div>
+            <div class="command">
+                <pre><code>git branch branch-name</code></pre>
+                <p>Create a new branch with the specified name.</p>
+            </div>
+            <div class="command">
+                <pre><code>git checkout branch-name</code></pre>
+                <p>Switch to the specified branch.</p>
+            </div>
+            <div class="command">
+                <pre><code>git checkout -b branch-name</code></pre>
+                <p>Create and switch to a new branch.</p>
+            </div>
+            <div class="command">
+                <pre><code>git merge branch-name</code></pre>
+                <p>Merge the specified branch into the current branch.</p>
+            </div>
+            <div class="command">
+                <pre><code>git branch -d branch-name</code></pre>
+                <p>Delete the specified branch.</p>
+            </div>
+        </section>
+        <section id="stashing">
+            <h2>Stashing</h2>
+            <div class="command">
+                <pre><code>git stash</code></pre>
+                <p>Save uncommitted changes for later use.</p>
+            </div>
+            <div class="command">
+                <pre><code>git stash list</code></pre>
+                <p>List all stashed changes.</p>
+            </div>
+            <div class="command">
+                <pre><code>git stash apply</code></pre>
+                <p>Apply the most recent stash to the working directory.</p>
+            </div>
+            <div class="command">
+                <pre><code>git stash drop</code></pre>
+                <p>Remove the most recent stash.</p>
+            </div>
+            <div class="command">
+                <pre><code>git stash pop</code></pre>
+                <p>Apply and remove the most recent stash.</p>
+            </div>
+        </section>
+        <section id="collaboration">
+            <h2>Collaboration</h2>
+            <div class="command">
+                <pre><code>git clone url</code></pre>
+                <p>Clone a repository from a remote URL.</p>
+            </div>
+            <div class="command">
+                <pre><code>git remote add origin url</code></pre>
+                <p>Add a remote repository as origin.</p>
+            </div>
+            <div class="command">
+                <pre><code>git push origin branch</code></pre>
+                <p>Push commits to the remote repository.</p>
+            </div>
+            <div class="command">
+                <pre><code>git pull origin branch</code></pre>
+                <p>Fetch and merge changes from the remote repository.</p>
+            </div>
+            <div class="command">
+                <pre><code>git fetch origin</code></pre>
+                <p>Fetch changes from the remote without merging.</p>
+            </div>
+            <div class="command">
+                <pre><code>git remote -v</code></pre>
+                <p>List all remote repositories.</p>
+            </div>
+        </section>
+        <section id="recovery">
+            <h2>Recovery</h2>
+            <div class="command">
+                <pre><code>git reset --soft HEAD~1</code></pre>
+                <p>Undo the last commit but keep changes staged.</p>
+            </div>
+            <div class="command">
+                <pre><code>git reset --hard HEAD~1</code></pre>
+                <p>Undo the last commit and discard changes.</p>
+            </div>
+            <div class="command">
+                <pre><code>git revert commit-hash</code></pre>
+                <p>Create a new commit that undoes changes from a specific commit.</p>
+            </div>
+            <div class="command">
+                <pre><code>git reflog</code></pre>
+                <p>Show a log of all recent actions in the repository.</p>
+            </div>
+            <div class="command">
+                <pre><code>git checkout -- file</code></pre>
+                <p>Discard changes to a specific file.</p>
+            </div>
+        </section>
+        <section id="github-actions">
+            <h2>GitHub Actions</h2>
+            <div class="command">
+                <pre><code>name: CI</code></pre>
+                <p>Define the name of a GitHub Actions workflow.</p>
+            </div>
+            <div class="command">
+                <pre><code>on: [push]</code></pre>
+                <p>Trigger the workflow on push events.</p>
+            </div>
+            <div class="command">
+                <pre><code>jobs:</code></pre>
+                <p>Define jobs in a workflow.</p>
+            </div>
+            <div class="command">
+                <pre><code>uses: actions/checkout@v2</code></pre>
+                <p>Checkout repository code in a job step.</p>
+            </div>
+            <div class="command">
+                <pre><code>run: npm test</code></pre>
+                <p>Run a command in a job step.</p>
+            </div>
+        </section>
+        <section id="ci-cd">
+            <h2>CI/CD</h2>
+            <div class="command">
+                <pre><code>deploy:</code></pre>
+                <p>Define a deployment job in CI/CD pipeline.</p>
+            </div>
+            <div class="command">
+                <pre><code>environment: production</code></pre>
+                <p>Specify the environment for deployment.</p>
+            </div>
+            <div class="command">
+                <pre><code>needs: build</code></pre>
+                <p>Specify job dependencies in the pipeline.</p>
+            </div>
+            <div class="command">
+                <pre><code>if: github.ref == 'refs/heads/main'</code></pre>
+                <p>Conditional execution based on branch.</p>
+            </div>
+            <div class="command">
+                <pre><code>secrets: ${{ secrets.API_KEY }}</code></pre>
+                <p>Use secrets in CI/CD workflows.</p>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
